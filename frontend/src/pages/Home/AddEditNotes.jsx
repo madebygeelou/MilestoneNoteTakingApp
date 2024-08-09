@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TagInput from "../../components/Input/TagInput";
 import { MdClose } from "react-icons/md";
-import axiosinstance from "../../../utils/axiosinstance";
+import axiosinstance from "../../utils/axiosinstance";
 
 const AddEditNotes = ({
   noteData,

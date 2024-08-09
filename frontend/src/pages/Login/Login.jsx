@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar";
 import PasswordInput from "../../components/Input/PasswordInput";
 import axiosinstance from "../../utils/axiosinstance";
 import { validateEmail } from "../../utils/helper";

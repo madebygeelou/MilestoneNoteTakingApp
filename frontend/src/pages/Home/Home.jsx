@@ -5,7 +5,7 @@ import { MdAdd } from "react-icons/md";
 import Modal from "react-modal";
 import AddEditNotes from "./AddEditNotes";
 import Toast from "../../components/ToastMessage/Toast";
-import axiosInstance from "../../utils/axiosInstance";
+import axiosinstance from "../../utils/axiosinstance";
 import { useNavigate } from "react-router-dom";
 import AddNotesImg from "../../assets/images/add-notes.svg";
 import NoDataImg from "../../assets/images/no-data.svg";
@@ -54,7 +54,7 @@ const Home = () => {
   // Get all notes
   const getAllNotes = async () => {
     try {
-      const response = await axiosInstance.get("/get-all-notes");
+      const response = await axiosinstance.get("/get-all-notes");
 
       if (response.data && response.data.notes) {
         setAllNotes(response.data.notes);
@@ -68,7 +68,7 @@ const Home = () => {
   const deleteNote = async (data) => {
     const noteId = data._id;
     try {
-      const response = await axiosInstance.delete("/delete-note/" + noteId);
+      const response = await axiosinstance.delete("/delete-note/" + noteId);
 
       if (response.data && !response.data.error) {
         showToastMessage("Note Deleted Successfully", "delete");
@@ -82,7 +82,7 @@ const Home = () => {
   // Get User Info
   const getUserInfo = async () => {
     try {
-      const response = await axiosInstance.get("/get-user");
+      const response = await axiosinstance.get("/get-user");
       if (response.data && response.data.user) {
         setUserInfo(response.data.user);
       }
@@ -97,7 +97,7 @@ const Home = () => {
   // Search for a Note
   const onSearchNote = async (query) => {
     try {
-      const response = await axiosInstance.get("/search-notes", {
+      const response = await axiosinstance.get("/search-notes", {
         params: { query },
       });
 
@@ -114,7 +114,7 @@ const Home = () => {
     const noteId = noteData._id;
 
     try {
-      const response = await axiosInstance.put(
+      const response = await axiosinstance.put(
         "/update-note-pinned/" + noteId,
         {
           isPinned: !noteData.isPinned,

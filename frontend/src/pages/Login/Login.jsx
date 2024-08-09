@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import PasswordInput from "../../components/Input/PasswordInput";
-import axiosInstance from "../../utils/axiosInstance";
+import axiosinstance from "../../utils/axiosinstance";
 import { validateEmail } from "../../utils/helper";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -30,7 +30,7 @@ const Login = () => {
     //Login API Call
 
     try {
-      const response = await axiosInstance.post("/login", {
+      const response = await axiosinstance.post("/login", {
         email: email,
         password: password,
       });

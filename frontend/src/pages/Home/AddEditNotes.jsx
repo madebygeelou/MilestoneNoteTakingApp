@@ -46,7 +46,7 @@ const AddEditNotes = ({
     const noteId = noteData._id
 
     try {
-      const response = await axiosinstance.put("/edit-note/" + noteId, {
+      const response = await axiosinstance.put("/edit-note" + noteId, {
         title,
         content,
         tags,

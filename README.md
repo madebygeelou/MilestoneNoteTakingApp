@@ -18,3 +18,5 @@ The trash icon on your notes is used for deleting them.
 
 
 Issues with our code:
+
+We were not able to fix the note posting issue once we connected it to backend.
